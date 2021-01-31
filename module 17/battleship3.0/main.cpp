@@ -95,25 +95,26 @@ int main() {
     std::cout << "Welcome to Battleship 3.0!\n\n";
 
     // Placing ships
-    for (int player = 1; player <=2; player++) {
-        std::cout << "PLAYER " << player << "!!!\n";
+    for (int playerIndex = 0; playerIndex < 2; playerIndex++) {
+        int playerDisplayIndex = playerIndex + 1;
+        std::cout << "PLAYER " << playerIndex + 1 << "!!!\n";
 
         for (int shipType = 0; shipType < 4; shipType++) {
             bool IsLengthOne = (shipLength[shipType] == 1);
             std::cout << "Place your ships of size " << shipLength[shipType] <<
             ". Enter coordinates " << (IsLengthOne ? "x y" : "x1 y1 x2 y2") << " .\n";
             for (int shipNumber = 0; shipNumber < shipsNumber[shipType]; shipNumber++) {
-                displayField(playerFields[player - 1]);
+                displayField(playerFields[playerIndex]);
                 std::cout << "Ship # " << shipNumber + 1 << ":";
                 if (IsLengthOne) {
                     int x, y;
                     std::cin >> x >> y;
-                    while (!placeShip(playerFields[player - 1], x, y, x, y, 1))
+                    while (!placeShip(playerFields[playerIndex], x, y, x, y, 1))
                         std::cin >> x >> y;
                 } else {
                     int x1, y1, x2, y2;
                     std::cin >> x1 >> y1 >> x2 >> y2;
-                    while (!placeShip(playerFields[player - 1], x1, y1, x2, y2, shipLength[shipType]))
+                    while (!placeShip(playerFields[playerIndex], x1, y1, x2, y2, shipLength[shipType]))
                         std::cin >> x1 >> y1 >> x2 >> y2;
                 }
             }
@@ -123,33 +124,35 @@ int main() {
 
     bool victory = false;
     while (true) {
-        for (int player = 1; player <=2; player++) {
-            std::cout << "PLAYER " << player << "!!! Your turn! Attack!\n";
+        for (int playerIndex = 0; playerIndex < 2; playerIndex++) {
+            int playerDisplayIndex = playerIndex + 1;
+            int opponentIndex = 1 - playerIndex;
+            std::cout << "PLAYER " << playerDisplayIndex << "!!! Your turn! Attack!\n";
 
             // Added ability to shoot multiple times if shot is successful.
             bool missed = false;
             while (!missed) {
-                displayField(attackFields[player - 1]);
+                displayField(attackFields[playerIndex]);
 
                 int x, y;
                 std::cin >> x >> y;
                 while(!checkAttackCoords(x, y))
                     std::cin >> x >> y;
 
-                attackFields[player - 1][x][y] = true;
+                attackFields[playerIndex][x][y] = true;
 
-                if (playerFields[2 - player][x][y]) {
+                if (playerFields[opponentIndex][x][y]) {
                     std::cout << "HIT!! Nice shot! ";
-                    playerFields[2 - player][x][y] = false;
-                    shipPointsLeft[2 - player]--;
-                    victory = (shipPointsLeft[2 - player] == 0);
+                    playerFields[opponentIndex][x][y] = false;
+                    shipPointsLeft[opponentIndex]--;
+                    victory = (shipPointsLeft[opponentIndex] == 0);
                 } else {
                     std::cout << "Miss.";
                     missed = true;
                 }
                 if (!missed) {
                     if (victory) {
-                        std::cout << "\n\n PLAYER " << player << " WON!!! Congratulations!";
+                        std::cout << "\n\n PLAYER " << playerDisplayIndex << " WON!!! Congratulations!";
                         break;
                     } else
                         std::cout << "Shoot again!\n";

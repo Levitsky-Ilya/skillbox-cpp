@@ -12,11 +12,8 @@ int main() {
                 std::cout << "Height should be between 0 and 10: ";
                 std::cin >> height;
             }
-            int k = 0;
-            for (; k < height; k++)
-                terrain[i][j][k] = true;
-            for(; k < 10; k++)
-                terrain[i][j][k] = false;
+            for (int k = 0; k < height; k++)
+                terrain[i][j][k] = (k < height);
         }
 
     int sliceLevel;
