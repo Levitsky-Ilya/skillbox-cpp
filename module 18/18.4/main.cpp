@@ -13,13 +13,10 @@ int main() {
 
     int first = 0, last = N - 1;
     for(int i = 0; i < N; i++) {
-        if (-arrayInput[first] > arrayInput[last]) {
-            arrayOutput[i] = arrayInput[first];
-            first++;
-        } else {
-            arrayOutput[i] = arrayInput[last];
-            last--;
-        }
+        if (-arrayInput[first] > arrayInput[last])
+            arrayOutput[i] = arrayInput[first++];
+        else
+            arrayOutput[i] = arrayInput[last--];
     }
 
     for(int i = N - 1; i >= 0; i--)
