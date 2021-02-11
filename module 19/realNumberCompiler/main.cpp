@@ -4,15 +4,20 @@
 
 
 int main() {
+    std::string wholePartString, fractionalPartString;
     int wholePartInt, fractionalPartInt;
+
     std::cout << "Input whole part of the real number: " << std::endl;
-    std::cin >> wholePartInt;
+    std::cin >> wholePartString;
+    wholePartInt = stoi(wholePartString);
     if (wholePartInt < 0 || wholePartInt == INT_MAX) {
         std::cout << "Error! Too big or too small number." << std::endl;
         return 0;
     }
+
     std::cout << "Input fractional part of the real number: " << std::endl;
-    std::cin >> fractionalPartInt;
+    std::cin >> fractionalPartString;
+    fractionalPartInt = stoi(fractionalPartString);
     if (fractionalPartInt < 0 || fractionalPartInt == INT_MAX) {
         std::cout << "Error! Too big or too small number." << std::endl;
         return 0;
