@@ -2,32 +2,37 @@
 #include <string>
 #include <climits>
 
+bool checkIfDigits(std::string str) {
+    for (char ch : str)
+        if (ch < '0' || ch > '9')
+            return false;
+    return true;
+}
 
 int main() {
     std::string wholePartString, fractionalPartString;
-    int wholePartInt, fractionalPartInt;
+    bool negative;
 
     std::cout << "Input whole part of the real number: " << std::endl;
     std::cin >> wholePartString;
-    wholePartInt = stoi(wholePartString);
-    if (wholePartInt < 0 || wholePartInt == INT_MAX) {
-        std::cout << "Error! Too big or too small number." << std::endl;
+    if (wholePartString[0] == '-') {
+        wholePartString = wholePartString.substr(1,wholePartString.size() - 1);
+        negative = true;
+    }
+    if (!checkIfDigits(wholePartString)) {
+        std::cout << "Error! Incorrect number." << std::endl;
         return 0;
     }
 
     std::cout << "Input fractional part of the real number: " << std::endl;
     std::cin >> fractionalPartString;
-    fractionalPartInt = stoi(fractionalPartString);
-    if (fractionalPartInt < 0 || fractionalPartInt == INT_MAX) {
-        std::cout << "Error! Too big or too small number." << std::endl;
+    if (!checkIfDigits(fractionalPartString)) {
+        std::cout << "Error! Incorrect number." << std::endl;
         return 0;
     }
 
-    double fraction = (double) fractionalPartInt;
-    while (fraction >= 1) {
-        fraction /= 10;
-    }
-    double number = (double) wholePartInt + fraction;
+    double number = std::stod(wholePartString + "." + fractionalPartString);
+    if (negative) number = -number;
 
     std::cout << "Your real number: " << std::to_string(number) << std::endl;
     return 0;
