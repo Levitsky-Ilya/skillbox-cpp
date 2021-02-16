@@ -8,9 +8,8 @@ bool substr(char* a, char* b) {
 }
 
 int main() {
-    //ISO C++11 does nor allow conversion from string literal to char *
-    char* a = "Hello world";
-    char* b = "wor";
-    char* c = "banana";
-    std::cout << substr(a,b) << " " << substr(a,c);
+    const char* a = "Hello world";
+    const char* b = "wor";
+    const char* c = "banana";
+    std::cout << substr((char*) a, (char*)b) << " " << substr((char*) a,(char*) c);
 }

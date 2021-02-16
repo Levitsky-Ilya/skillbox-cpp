@@ -1,7 +1,7 @@
 #include <iostream>
 
 int* reverse(int* arr) {
-    int* result = (int*)malloc(10 * sizeof(int));
+    int* result = new int[10];
     for (int i = 9; i >= 0; i--) {
         result[i] = arr[9 - i];
     }

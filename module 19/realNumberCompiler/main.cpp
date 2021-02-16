@@ -11,7 +11,7 @@ bool checkIfDigits(std::string str) {
 
 int main() {
     std::string wholePartString, fractionalPartString;
-    bool negative;
+    bool negative = false;
 
     std::cout << "Input whole part of the real number: " << std::endl;
     std::cin >> wholePartString;
