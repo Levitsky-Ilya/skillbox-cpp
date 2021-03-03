@@ -4,7 +4,7 @@
 
 int main() {
     std::string filename;
-    std::cout << "Enter enter full path to the statements file:\n";
+    std::cout << "Enter full path to the statements file:\n";
     std::getline(std::cin, filename);
 
     std::ifstream textStream;
