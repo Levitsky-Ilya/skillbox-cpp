@@ -25,13 +25,16 @@ int main() {
     std::cout << "Let's start fishing! What kind of fish are we catching today?\n";
     std::cin >> inputFish;
 
+    int fishCount = 0;
     while(!inFileStream.eof()) {
         inFileStream >> caughtFish;
-        if (inputFish == caughtFish)
+        if (inputFish == caughtFish) {
             outFileStream << caughtFish << std::endl;
+            fishCount++;
+        }
     }
 
-    std::cout << "Fishing finished! See basket.txt.\n";
+    std::cout << "Fishing finished! Caught " << fishCount << " fish. See basket.txt.\n";
 
     inFileStream.close();
     outFileStream.close();

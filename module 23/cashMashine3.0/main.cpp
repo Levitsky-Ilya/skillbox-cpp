@@ -17,13 +17,11 @@ const int banknoteTypesCount = 6;
 // refillCashMachine restocks the cash machine (cashFile) with new banknotes.
 // New banknotes are sorted in descending order.
 // Return true if success, false otherwise.
-int refillCashMachine(std::string cashMachFilename) {
+int refillCashMachine(const std::string& cashMachFilename) {
     std::fstream cashFile(cashMachFilename, std::ios::out);
     if (cashFile.fail())
         return FILE_OPEN_FAILURE;
     int banknotes[6] = {0, 0, 0, 0, 0, 0};
-
-    std::srand(time(nullptr));
 
     // The banknote generation procedure bellow is equivalent to generating random banknotes and sorting them.
     for (int i = 0; i < bankNotesMaxCount; i++)
@@ -49,7 +47,7 @@ int banknote2Index(int banknote) {
 }
 
 //
-int withdrawCashMachine(std::string cashMachFilename, int value) {
+int withdrawCashMachine(const std::string& cashMachFilename, int value) {
 
     std::fstream cashFile(cashMachFilename, std::ios::in);
     if (cashFile.fail())
@@ -91,6 +89,8 @@ int withdrawCashMachine(std::string cashMachFilename, int value) {
 }
 
 int main() {
+    std::srand(time(nullptr));
+
     std::string input;
     std::cout << "Enter \"+\" to refill the cash machine.\n"
                  "Enter \"-\" to withdraw from the cash machine.\n" << std::endl;
