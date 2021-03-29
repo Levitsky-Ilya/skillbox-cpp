@@ -11,6 +11,13 @@ enum RoomType {
     UNDEFINED
 };
 
+enum BuildingType {
+    HOUSE,
+    GARAGE,
+    SHED,
+    BATHHOUSE
+};
+
 // ***** STRUCTS ***** //
 
 struct Room {
@@ -23,34 +30,22 @@ struct Stage {
     float height = 0;
 };
 
-struct House {
+struct Building {
+    BuildingType type = HOUSE;
     float area = 0;
     std::vector<Stage> stages = {};
     bool hasFireplace = false;
 };
 
-struct Garage {
-    float area = 0;
-};
-
-struct Shed {
-    float area = 0;
-};
-
-struct Bathhouse {
-    float area = 0;
-    bool hasFireplace = false;
-};
-
 struct Homestead {
-    std::vector<House> houses = {};
-    std::vector<Garage> garages = {};
-    std::vector<Shed> sheds = {};
-    std::vector<Bathhouse> bathhouses = {};
+    std::vector<Building> houses = {};
+    std::vector<Building> garages = {};
+    std::vector<Building> sheds = {};
+    std::vector<Building> bathhouses = {};
 };
 
 struct Village {
-    float area;
+    float area = 0;
     std::vector<Homestead> homesteads = {};
 };
 
@@ -86,7 +81,7 @@ int enterInt(const std::string& name, bool inclZero) {
 }
 
 bool enterFireplace(const std::string& name) {
-    std::string numberStr = "";
+    std::string numberStr;
     do {
         std::cout << "Does " << name << " have a fireplace? (y/n)\n";
         std::getline(std::cin, numberStr);
@@ -96,7 +91,7 @@ bool enterFireplace(const std::string& name) {
 
 RoomType enterRoomType(const std::string& name) {
     std::string roomTypeStr;
-    RoomType type = UNDEFINED;
+    RoomType type;
     do {
         std::cout << "Enter the type of " << name << std::endl;
         std::cout << "(bedroom/kitchen/bathroom/playing_room/living_room)" << std::endl;
@@ -126,7 +121,8 @@ void initStage (Stage &stage, const std::string& name) {
     }
 }
 
-void initHouse(House &house, const std::string& name) {
+void initHouse(Building &house, const std::string& name) {
+    house.type = HOUSE;
     house.area = enterFloatPos("the area of " + name);
     house.hasFireplace = enterFireplace(name);
     int stagesCount = enterInt("the number of stages in " + name, false);
@@ -137,15 +133,18 @@ void initHouse(House &house, const std::string& name) {
     }
 }
 
-void initGarage(Garage &garage, const std::string& name) {
+void initGarage(Building &garage, const std::string& name) {
+    garage.type = GARAGE;
     garage.area = enterFloatPos("the area of " + name);
 }
 
-void initShed(Shed &shed, const std::string& name) {
+void initShed(Building &shed, const std::string& name) {
+    shed.type = SHED;
     shed.area = enterFloatPos("the area of " + name);
 }
 
-void initBathhouse(Bathhouse &bathhouse, const std::string& name) {
+void initBathhouse(Building &bathhouse, const std::string& name) {
+    bathhouse.type = BATHHOUSE;
     bathhouse.area = enterFloatPos("the area of " + name);
     bathhouse.hasFireplace = enterFireplace(name);
 }
@@ -156,22 +155,22 @@ void initHomeStead(Homestead &homestead, const std::string& name) {
     int shedsCount = enterInt("the number of sheds in " + name, true);
     int bathhousesCount = enterInt("the number of bathhouses in " + name, true);
     for (int i = 1; i <= housesCount; i++) {
-        House house;
+        Building house;
         initHouse(house, "house #" + std::to_string(i));
         homestead.houses.push_back(house);
     }
     for (int i = 1; i <= garagesCount; i++) {
-        Garage garage;
+        Building garage;
         initGarage(garage, "garage #" + std::to_string(i));
         homestead.garages.push_back(garage);
     }
     for (int i = 1; i <= shedsCount; i++) {
-        Shed shed;
+        Building shed;
         initShed(shed, "shed #" + std::to_string(i));
         homestead.sheds.push_back(shed);
     }
     for (int i = 1; i <= bathhousesCount; i++) {
-        Bathhouse bathhouse;
+        Building bathhouse;
         initBathhouse(bathhouse, "garage #" + std::to_string(i));
         homestead.bathhouses.push_back(bathhouse);
     }

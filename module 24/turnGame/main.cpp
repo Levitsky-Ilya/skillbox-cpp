@@ -18,9 +18,9 @@ struct Coords {
 
 struct Character {
     std::string name = "Unknown";
-    int health = 50 + rand() % 100;
-    int armor = rand() % 50;
-    int damage = 15 + rand() % 15;
+    int health = 50 + rand() % 101;
+    int armor = rand() % 51;
+    int damage = 15 + rand() % 16;
     Coords coords;
 };
 
