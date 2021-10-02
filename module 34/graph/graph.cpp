@@ -46,7 +46,6 @@ void ListGraph::AddEdge(int from, int to) {
         m_vCount = ((from > to) ? from : to) + 1;
     }
 
-    //m_adjList->emplace({from});
     (*m_adjList)[from].emplace(to);
 }
 
