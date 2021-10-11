@@ -1,0 +1,121 @@
+{
+  "Duna": {
+    "releaseDate": {
+      "day": "3",
+      "month": "september",
+      "year": "2021"
+    },
+    "country": "USA",
+    "studio": "WarnerBrothers",
+    "scenario": "Jon Spaihts",
+    "director": "Denis Villeneuve",
+    "producer": "Denis Villeneuve",
+    "actors": {
+      "Timothee Hal Chalamet": "Paul Atreides",
+      "Rebecca Louisa Ferguson Sundstorm": "Lady Jessica",
+      "Oscar Isaac": "Duke Leto Atreides",
+      "Josh Brolin": "Gurney Halleck",
+      "Stellan Skarsgard": "Baron Vladimir Harkonnen",
+      "Dave Bautista": "Glossu Rabban",
+      "Stephen McKinley Henderson": "Thufir Hawat",
+      "Zendaya": "Chani",
+      "David Dastmalchian": "Piter De Vries",
+      "Chang Chen": "Dr. Wellington Yueh",
+      "Sharon Duncan-Brewster": "Dr. Liet-Kynes",
+      "Charlotte Rampling": "Gaius Helen Mohiam",
+      "Jason Momoa": "Duncan Idaho",
+      "Javier Bardem": "Stilgar",
+      "Babs Olusanmokun": "Jamis",
+      "Benjamin Clementine": "Herald of the Change"
+    }
+  },
+  "Shang-Chi and the Legend of the Ten Rings": {
+    "releaseDate": {
+      "day": "16",
+      "month": "August",
+      "year": "2021"
+    },
+    "country": "USA",
+    "studio": "Marvel",
+    "scenario": "Dave Callaham",
+    "director": "Destin Daniel Cretton",
+    "producer": "Victoria Alonso",
+    "actors": {
+      "Simu Liu": "Xu Shang-Chi",
+      "Awkwafina": "Katy",
+      "Meng'er Zhang": "Xu Xialing",
+      "Fala Chen": "Ying Li",
+      "Florian Munteanu": "Razor Fist",
+      "Benedict Wong": "Wong",
+      "Michelle Yeoh": "Ying Nan",
+      "Ben Kingsley": "Trevor Slattery",
+      "Tony Leung": "Xu Wenwu"
+    }
+  },
+  "Death of a Ladies' Man": {
+    "releaseDate": {
+      "day": "16",
+      "month": "September",
+      "year": "2020"
+    },
+    "country": "Canada",
+    "studio": "Mongrel Media",
+    "scenario": "Matt Bissonnette",
+    "director": "Matt Bissonnette",
+    "producer": "Don Carmody",
+    "actors": {
+      "Gabriel Byrne": "Samuel O'Shea",
+      "Jessica Pare": "Charlotte",
+      "Brian Gleeson": "Ben O'Shea"
+    }
+  },
+  "Le discours": {
+    "releaseDate": {
+      "day": "16",
+      "month": "September",
+      "year": "2021"
+    },
+    "country": "France",
+    "studio": "Mongrel Media",
+    "scenario": "Laurent Tirard",
+    "director": "Laurent Tirard",
+    "producer": "Olivia Lagache",
+    "actors": {
+      "Benjamin Lavernhe": "Adrien",
+      "Sara Giraudeau": "Sonia",
+      "Kyan Khojandi": "Ludo",
+      "Julia Piaton": "Sophie",
+      "Francois Morel": "Le pere d'Adrien",
+      "Guilaine Londez": "La mere d'Adrien",
+      "Sebastien Chassagne": "Sebastien",
+      "Adeline d'Hermy": "Solene",
+      "Sebastien Pouderoux": "Romain",
+      "Sarah Suco": "Karine",
+      "Marilou Aussilloux": "Isabelle",
+      "Christophe Montenez": "Le mec de Solene"
+    }
+  },
+  "Flash mob": {
+    "releaseDate": {
+      "day": "30",
+      "month": "September",
+      "year": "2021"
+    },
+    "country": "Russia",
+    "studio": "Cinemaus Studio",
+    "scenario": "Tatiana Miroshnik",
+    "director": "Alena Rubinstein",
+    "producer": "Vladimir Esinov",
+    "actors": {
+      "Nikolay Korotaev": "Dan",
+      "Alena Spivak-Bychkova": "Dina",
+      "Catherine Panasyuk": "Mouse",
+      "Roman Madyanov": "Roman",
+      "Euclid Kurdzidis": "Konstantin",
+      "Evgeniya Yarushnikova": "Stella",
+      "Gleb Kozlyaev": "Nikita",
+      "Stephanie Joy": "Baby",
+      "Sabrine Fitini": "Sabrine"
+    }
+  }
+}
