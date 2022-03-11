@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>Remote</class>
- <widget class="QMainWindow" name="Remote">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -630,7 +630,7 @@ color: rgb(238, 237, 219)</string>
   <connection>
    <sender>pushButton_1</sender>
    <signal>clicked()</signal>
-   <receiver>Remote</receiver>
+   <receiver>MainWindow</receiver>
    <slot>select1()</slot>
    <hints>
     <hint type="sourcelabel">
@@ -646,7 +646,7 @@ color: rgb(238, 237, 219)</string>
   <connection>
    <sender>pushButton_2</sender>
    <signal>clicked()</signal>
-   <receiver>Remote</receiver>
+   <receiver>MainWindow</receiver>
    <slot>select2()</slot>
    <hints>
     <hint type="sourcelabel">
@@ -662,7 +662,7 @@ color: rgb(238, 237, 219)</string>
   <connection>
    <sender>pushButton_3</sender>
    <signal>clicked()</signal>
-   <receiver>Remote</receiver>
+   <receiver>MainWindow</receiver>
    <slot>select3()</slot>
    <hints>
     <hint type="sourcelabel">
@@ -678,7 +678,7 @@ color: rgb(238, 237, 219)</string>
   <connection>
    <sender>pushButton_4</sender>
    <signal>clicked()</signal>
-   <receiver>Remote</receiver>
+   <receiver>MainWindow</receiver>
    <slot>select4()</slot>
    <hints>
     <hint type="sourcelabel">
@@ -694,7 +694,7 @@ color: rgb(238, 237, 219)</string>
   <connection>
    <sender>pushButton_5</sender>
    <signal>clicked()</signal>
-   <receiver>Remote</receiver>
+   <receiver>MainWindow</receiver>
    <slot>select5()</slot>
    <hints>
     <hint type="sourcelabel">
@@ -710,7 +710,7 @@ color: rgb(238, 237, 219)</string>
   <connection>
    <sender>pushButton_6</sender>
    <signal>clicked()</signal>
-   <receiver>Remote</receiver>
+   <receiver>MainWindow</receiver>
    <slot>select6()</slot>
    <hints>
     <hint type="sourcelabel">
@@ -726,7 +726,7 @@ color: rgb(238, 237, 219)</string>
   <connection>
    <sender>pushButton_7</sender>
    <signal>clicked()</signal>
-   <receiver>Remote</receiver>
+   <receiver>MainWindow</receiver>
    <slot>select7()</slot>
    <hints>
     <hint type="sourcelabel">
@@ -742,7 +742,7 @@ color: rgb(238, 237, 219)</string>
   <connection>
    <sender>pushButton_8</sender>
    <signal>clicked()</signal>
-   <receiver>Remote</receiver>
+   <receiver>MainWindow</receiver>
    <slot>select8()</slot>
    <hints>
     <hint type="sourcelabel">
@@ -758,7 +758,7 @@ color: rgb(238, 237, 219)</string>
   <connection>
    <sender>pushButton_9</sender>
    <signal>clicked()</signal>
-   <receiver>Remote</receiver>
+   <receiver>MainWindow</receiver>
    <slot>select9()</slot>
    <hints>
     <hint type="sourcelabel">
@@ -774,7 +774,7 @@ color: rgb(238, 237, 219)</string>
   <connection>
    <sender>pushButton_0</sender>
    <signal>clicked()</signal>
-   <receiver>Remote</receiver>
+   <receiver>MainWindow</receiver>
    <slot>select0()</slot>
    <hints>
     <hint type="sourcelabel">
@@ -790,7 +790,7 @@ color: rgb(238, 237, 219)</string>
   <connection>
    <sender>volumePlus</sender>
    <signal>clicked()</signal>
-   <receiver>Remote</receiver>
+   <receiver>MainWindow</receiver>
    <slot>volumeUp()</slot>
    <hints>
     <hint type="sourcelabel">
@@ -806,7 +806,7 @@ color: rgb(238, 237, 219)</string>
   <connection>
    <sender>volumeMinus</sender>
    <signal>clicked()</signal>
-   <receiver>Remote</receiver>
+   <receiver>MainWindow</receiver>
    <slot>volumeDown()</slot>
    <hints>
     <hint type="sourcelabel">
@@ -822,7 +822,7 @@ color: rgb(238, 237, 219)</string>
   <connection>
    <sender>channelPlus</sender>
    <signal>clicked()</signal>
-   <receiver>Remote</receiver>
+   <receiver>MainWindow</receiver>
    <slot>channelUp()</slot>
    <hints>
     <hint type="sourcelabel">
@@ -838,7 +838,7 @@ color: rgb(238, 237, 219)</string>
   <connection>
    <sender>channelMinus</sender>
    <signal>clicked()</signal>
-   <receiver>Remote</receiver>
+   <receiver>MainWindow</receiver>
    <slot>channelDown()</slot>
    <hints>
     <hint type="sourcelabel">
